@@ -4,9 +4,9 @@ pragma solidity ^0.8.19;
 import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
-contract Wlmao is ERC20("DYPUMPING","dwd"){
+contract Wlmao is ERC20{
     IERC20 LMAO;
-    constructor(address _LMAO){
+    constructor(address _LMAO) ERC20("WrappedLmao","WLMAO"){
          LMAO = IERC20(_LMAO);
     }
     function depositLmao (uint _amount)public{

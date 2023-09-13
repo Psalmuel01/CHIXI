@@ -1,7 +1,7 @@
 import { ethers } from "hardhat";
 
 async function main() {
-    const lmao = await ethers.deployContract("LMAO", []);
+    const lmao = await ethers.deployContract("Lmao", []);
     await lmao.waitForDeployment();
 
     console.log("LMAO Token deployed to: ", lmao.target);
